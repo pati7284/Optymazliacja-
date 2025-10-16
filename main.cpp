@@ -73,7 +73,7 @@ void lab0()
 
 void lab1()
 {
-	cout << "------------ lab 1 ------------" << endl;
+// 	cout << "------------ lab 1 ------------" << endl;
 // 	random_device rd;
 // 	mt19937 gen(rd());
 // 	uniform_real_distribution<double> dist(-100.0, 100.0);
