@@ -1,0 +1,15 @@
+# ninja log v6
+7	1309	1760031218593356215	CMakeFiles/opt_lab.dir/ode_solver.cpp.o	bd0964c1081c42c7
+11	802	1760032103595818145	CMakeFiles/opt_lab.dir/main.cpp.o	600769ddf14f1266
+3	1443	1760030749647210502	CMakeFiles/opt_lab.dir/matrix.cpp.o	fa306163d56fa96
+8	1315	1760031218593989751	CMakeFiles/opt_lab.dir/solution.cpp.o	1d1c86efd5a66e1f
+10	858	1760032093164779401	CMakeFiles/opt_lab.dir/opt_alg.cpp.o	6c4cdca8f5cedfbf
+8	1307	1760031218594279581	CMakeFiles/opt_lab.dir/user_funs.cpp.o	feb30a1ed2b08100
+802	844	1760032104386649600	opt_lab	adc5de90bd1a0c71
+14	808	1760557464885996868	CMakeFiles/opt_lab.dir/user_funs.cpp.o	35983d7ee5b6f771
+11	809	1760557464883584254	CMakeFiles/opt_lab.dir/ode_solver.cpp.o	cb014086eb6bef6d
+12	813	1760557464884357376	CMakeFiles/opt_lab.dir/solution.cpp.o	dab6e6052f62edfa
+11	842	1760557464883200006	CMakeFiles/opt_lab.dir/matrix.cpp.o	e213eace4b10d040
+4	613	1760557486509469217	CMakeFiles/opt_lab.dir/main.cpp.o	903093167123e75e
+5	631	1760557486509870840	CMakeFiles/opt_lab.dir/opt_alg.cpp.o	6204ff2d94b1c4bf
+631	730	1760557487136248141	opt_lab	adc5de90bd1a0c71
