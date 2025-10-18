@@ -45,3 +45,63 @@ matrix ff1L(matrix x, matrix ud1, matrix ud2)
 	y = -cos(t) * exp(-pow(t - 2.0 * PI, 2)) + 0.002 * (t * t);
 	return y;
 }
+
+
+matrix df1(double t, matrix Y, matrix ud1, matrix ud2) {
+
+	// TRZYMAMY SI
+
+	// tu dla zbiornika A
+	double P_A = 2.0 ; // m^3
+	double V_A_in = 5.0; // to do main
+	double T_A = 95.0;
+
+
+	// tu dla zbiornika B
+	double P_B = 1.0;
+	double V_B_in = 1.0; // to do main
+	double T_B_in = 20.0;
+
+	double F_B_in =0.010; // m^3/s
+	double D_B = 0.00365665; //m^2
+
+
+	double a = 0.98 ; //wspolczynnik odpowiadajacy za lepkosc cieczy
+	double b = 0.64; // wspolaczynik odpowiadajacy za zwezenie strumieni cieczy
+	double g = 9.81; //przysieszenie
+
+
+
+	double F_A_out , F_B_out; // gdzie dV_A/dt = - F_A_out
+	double D_A = m2d(ud1); // to ma byc przekazane
+
+
+	if(Y(0)> 0.0) {
+
+		F_A_out = a*b*D_A*sqrt(2.0*g*(Y(0)/ P_A));
+	}
+	else {
+		F_A_out = 0.0;
+	}
+
+	if(Y(1)> 0.0) {
+		F_B_out = a*D_B*sqrt(2.0*g*(Y(1) / P_B));
+	}
+	else {
+		F_B_out = 0.0;
+	}
+
+	// rownania rozniczkowe
+	matrix dY = matrix(3,1);
+
+
+	dY(0) = -F_A_out;
+	dY(1) = F_A_out - F_B_out + F_B_in;
+	dY(2) = (F_B_in / Y(1)) * (T_B_in - Y(2)) + (F_A_out / Y(1)) * (T_A - Y(2));
+
+	return dY;
+
+
+
+
+}
